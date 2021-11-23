@@ -10,7 +10,7 @@ import Reward from "./components/Reward";
 
 function App() {
   return (
-    <div className="bg-black">
+    <div>
       <Router>
       <Header />
         <Switch>
