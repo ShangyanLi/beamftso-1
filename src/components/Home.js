@@ -1,63 +1,50 @@
 import React from "react";
 import ReactPlayer from 'react-player'
 import logo from "../logo.svg";
+// import video from "../assets/logo.mov";
+import logoAvi from "../assets/logo_1280x720.gif";
+import logoGraph from "../assets/Beam_OpenGraph.png";
+
+import { Popover } from '@headlessui/react'
+
+function MyPopover() {
+  return (
+    <Popover className="relative">
+      <Popover.Button>Solutions</Popover.Button>
+
+      <Popover.Panel className="absolute z-10">
+        <div className="grid grid-cols-2">
+          <a href="/analytics">Analytics</a>
+          <a href="/engagement">Engagement</a>
+          <a href="/security">Security</a>
+          <a href="/integrations">Integrations</a>
+        </div>
+
+        <img src={logoGraph} alt="" />
+      </Popover.Panel>
+    </Popover>
+  )
+}
+
+
 
 export default function Home() {
   return (
-    <div>
-      <div className="text-gray-500 font-mono bg-gray-100">
-        <video className="w-full h-3/5" controls >
-          <source src="/assets/logo.mp4" type="video/mp4" />
-        </video>
-        {/* <ReactPlayer
-          className="w-full h-auto"
-          url='./logo.mp4'
-          controls
-        /> */}
+   <>
+    <div class="relative overflow-hidden mb-8">
+    
+    <img class="z-30" src={logoAvi} alt="logo"/>
+    {/* <img class="z-40 -mt-96 w-1/3 h-1/3" src={logoGraph} /> */}
+   
 
-        {/* <div className="space-y-4 p-28 bg-white max-w-5xl mx-auto">
-          <p className="mb-10">
-            <a
-              href="mailto:info@sparkifi.xyz"
-              className="no-underline titlelink text-3xl"
-            >
-              SparkiFi
-            </a>
-          </p>
-          
-          <p className="font-thin">
-            SparkiFi is an independent infrastructure provider on the{" "}
-            <span className="font-medium">Songbird</span> and{" "}
-            <span className="font-medium">Flare</span> ecosystems. We provide the
-            highest quality and lowest cost data delegate services.
-          </p>
-          <p className="font-thin">
-            Delegate to us at&nbsp;
-            <a
-              className="no-underline titlelink"
-              href="https:songbird-explorer.flare.network/address/0x8888888830A0fddAaa09CCD891fF5D35fb45D2A6"
-              target="_blank"
-              rel="noreferrer"
-            >
-              0x8888888830A0fddAaa09CCD891fF5D35fb45D2A6
-            </a>
-          </p>
+    {/* <div class="relative w-full h-full flex justify-center items-center text-red text-2xl font-extrabold">
+    
+    
+    <img class="z-40 relative -ml-96 w-1/3 h-1/3 opacity-10" src={logoGraph} />
+    
+    </div> */}
+  </div>
 
-          <div className="absolute bottom-0 pb-8">
-            <p className="font-thin text-xs">
-              Copyright 2021 SparkiFi |
-              <a
-                href="mailto:info@sparkifi.xyz"
-                className="transition duration-700 ease-in-out hover:text-red-500"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Contact us
-              </a>
-            </p>
-          </div>
-        </div> */}
-      </div>
-    </div>
+   </>
   );
 }
