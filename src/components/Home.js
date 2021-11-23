@@ -1,50 +1,30 @@
-import React from "react";
-import ReactPlayer from 'react-player'
-import logo from "../logo.svg";
-// import video from "../assets/logo.mov";
-import logoAvi from "../assets/logo_1280x720.gif";
+import React, { useEffect } from "react";
 import logoGraph from "../assets/Beam_OpenGraph.png";
-
-import { Popover } from '@headlessui/react'
-
-function MyPopover() {
-  return (
-    <Popover className="relative">
-      <Popover.Button>Solutions</Popover.Button>
-
-      <Popover.Panel className="absolute z-10">
-        <div className="grid grid-cols-2">
-          <a href="/analytics">Analytics</a>
-          <a href="/engagement">Engagement</a>
-          <a href="/security">Security</a>
-          <a href="/integrations">Integrations</a>
-        </div>
-
-        <img src={logoGraph} alt="" />
-      </Popover.Panel>
-    </Popover>
-  )
-}
-
-
+import "../App.css"
 
 export default function Home() {
+
   return (
-   <>
-    <div class="relative overflow-hidden mb-8">
-    
-    <img class="z-30" src={logoAvi} alt="logo"/>
-    {/* <img class="z-40 -mt-96 w-1/3 h-1/3" src={logoGraph} /> */}
-   
-
-    {/* <div class="relative w-full h-full flex justify-center items-center text-red text-2xl font-extrabold">
-    
-    
-    <img class="z-40 relative -ml-96 w-1/3 h-1/3 opacity-10" src={logoGraph} />
-    
-    </div> */}
-  </div>
-
-   </>
+    <div className="bg-black ">
+      <div class="relative overflow-hidden mb-8 bg-black justify-item-center">
+        <div id="waveGif" className="video_div">
+          <img id="markId" class="w-1/5 mx-auto pt-3" src={logoGraph} alt="mark" />
+          <p className="font-thin text-white mx-auto mt-7 text-2xl">
+            Delegate to us at&nbsp;
+            <a
+              className="no-underline titlelink"
+              href="https:songbird-explorer.flare.network/address/0x8888888830A0fddAaa09CCD891fF5D35fb45D2A6"
+              target="_blank"
+              rel="noreferrer"
+            >
+              0x8888888830A0fddAaa09CCD891fF5D35fb45D2A6
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
   );
+
+
+
 }

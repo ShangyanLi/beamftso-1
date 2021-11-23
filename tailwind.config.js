@@ -19,9 +19,11 @@ module.exports = {
       colors: {
         'theme-blue': '#40bbff',
         'theme-red': "#DF362D",
-      }
+      },
 
-      
+      backgroundImage: {
+        'logo_bg': "url('/src/assets/logo_1280x720.gif') no-repeat",
+       }
 
     },
   },

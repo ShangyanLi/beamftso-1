@@ -5,13 +5,12 @@ import Wrap from "./components/Wrap";
 import Unwrap from "./components/Unwrap";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import Delegate from "./components/Delegate";
 import Undelegate from "./components/Undelegate";
 import Reward from "./components/Reward";
 
 function App() {
   return (
-    <div>
+    <div className="bg-black">
       <Router>
       <Header />
         <Switch>
@@ -19,7 +18,6 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/wrap" component={Wrap} />
           <Route path="/unwrap" component={Unwrap} />
-          {/* <Route path="/delegate" component={Delegate} /> */}
           <Route path="/undelegate" component={Undelegate} />
           <Route path="/reward" component={Reward} />
         </Switch>
